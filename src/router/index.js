@@ -61,7 +61,7 @@ const router = createRouter({
 })
 
 
-
+//创建路由前置守卫
 router.beforeEach((to,from,next)=>{
     // console.log(store.state.users.token);
     // console.log(to.meta.auth);
@@ -75,7 +75,7 @@ router.beforeEach((to,from,next)=>{
           }
         })
       }else{
-        next('/')
+        next()
       }
     // next()
 })
