@@ -5,6 +5,9 @@ const state ={
 const actions={
     login(context,data){
         return http.get('user/login',data)
+    },
+    info(context,data){
+        return http.get('user/login',data)
     }
 }
 const getters={}
@@ -13,10 +16,10 @@ const mutations={
         // console.log(1);
         state.token = payload
         
+    },
+    clearToken(state,payload){
+        state.token = ''
     }
-    // clearToken(state,payload){
-    //     state.token = ''
-    // }
 }
 
 export default{
