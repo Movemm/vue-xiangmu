@@ -22,6 +22,7 @@
                         </template>
                         <el-menu-item index="/money/property">物业费</el-menu-item>
                         <el-menu-item index="/money/car">停车费</el-menu-item>
+                        <el-menu-item index="/qrcode">缴费二维码</el-menu-item>
                     </el-sub-menu>
                     <el-sub-menu index="/tenants">
                         <template #title>
@@ -37,11 +38,9 @@
             <el-header>
                 <div class="user-info">
                     <el-space>
-                        <el-dropdown>
                         <span class="el-dropdown-link">
                             欢迎访问物业管理系统              
-                        </span>
-                        </el-dropdown>
+                        </span>  
                     </el-space>
                     <el-space>
                         <el-avatar src="https://p.qqan.com/up/2020-9/16010876389657332.jpg" />
@@ -91,13 +90,12 @@
 </script>
 
 <style lang="scss" scoped>
-
     .el-menu{
         height: 100%;
     }
     .el-header {
         display: flex;
-        justify-content: right;
+        justify-content: flex-end;
         align-items: center;
         background: #2e445b;
         width: 100%;
@@ -126,5 +124,9 @@
     }
     .el-dropdown-link{
         color: #fff;
+        font-size: 20px;
+    }
+    .el-breadcrumb{
+        font-size: 30px;
     }
 </style>
