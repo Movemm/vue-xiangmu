@@ -7,6 +7,9 @@ import 'element-plus/dist/index.css'
 import store from './store'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import './assets/main.css'
+
+
+import "lib-flexible/flexible.js"
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)

@@ -91,25 +91,31 @@
 </script>
 
 <style lang="scss" scoped>
+*{
+    margin: 0;
+    padding: 0;
+}
 
     .el-menu{
         height: 100%;
     }
     .el-header {
         display: flex;
-        justify-content: right;
+        justify-content: flex-end;
         align-items: center;
         background: #2e445b;
         width: 100%;
     }
 
     .el-aside {
+        
         height: 100vh;
     }
-
-    .el-menu {
-        height: 100%;
+    .el-main{
+        height: calc(100vh - 60px);
     }
+
+   
     .title{
         display: block;
         color:white;

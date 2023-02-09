@@ -5,7 +5,7 @@ const Index = () =>import('../views/Index.vue')
 const App = () =>import('../App.vue')
 const Record = () => import('../views/Index/Record.vue')
 const TenantsList = () => import('../views/Index/TenantsList.vue')
-const TenantsChange = () => import('../views/Index/TenantsChange.vue')
+const TenantsChange = () => import('../views/Index/TenantsChange.vue')    
 
 
 const router = createRouter({
@@ -36,7 +36,7 @@ const router = createRouter({
                     name: 'record',
                     component: Record ,
                     meta: {
-                        breadcrumb: ['数据展示']
+                        breadcrumb: ['']
                     }
                 },
                 {
