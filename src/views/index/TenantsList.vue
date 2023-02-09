@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>tenantslist</h2>
+        <h2>放大深刻理解对方卡拉</h2>
     </div>
 </template>
 

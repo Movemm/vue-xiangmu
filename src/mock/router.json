@@ -1,3 +1,6 @@
 {
-    "/user/login":"/login"
+    "/user/login":"/login",
+    "/user/money":"/money",
+    "/user/moneyCar":"/moneyCar",
+    "/user/family":"/family"
 }

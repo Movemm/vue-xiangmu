@@ -8,6 +8,16 @@ const actions={
     },
     info(context,data){
         return http.get('user/login',data)
+    },
+    money(context,data){
+        return http.get('user/money',data)
+    },
+    moneyCar(context,data){
+        return http.get('user/moneyCar',data)
+    },
+    family(context,data){
+        return http.get('user/family',data)
+
     }
 }
 const getters={}

@@ -6,7 +6,7 @@ const store = createStore({
         users
     },
     plugins: [createPersistedState({
-        paths:['users.token']
+        paths:['users.token']//存储token 需要下载和引入插件
     })]
 })
 

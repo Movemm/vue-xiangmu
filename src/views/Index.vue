@@ -20,8 +20,8 @@
                             <el-icon><Notebook /></el-icon>
                             <span>缴费管理</span>
                         </template>
-                        <el-menu-item index="/money/property">物业费</el-menu-item>
-                        <el-menu-item index="/money/car">停车费</el-menu-item>
+                        <el-menu-item index="/money/property">物业费列表</el-menu-item>
+                        <el-menu-item index="/money/car">停车费列表</el-menu-item>
                         <el-menu-item index="/qrcode">缴费二维码</el-menu-item>
                     </el-sub-menu>
                     <el-sub-menu index="/tenants">
@@ -37,14 +37,14 @@
         <el-container>
             <el-header>
                 <div class="user-info">
-                    <el-space>
-                        <span class="el-dropdown-link">
+                    <el-space :size="20">
+                        <span class="el-dropdown-link" >
                             欢迎访问物业管理系统              
                         </span>  
                     </el-space>
-                    <el-space>
-                        <el-avatar src="https://p.qqan.com/up/2020-9/16010876389657332.jpg" />
-                        
+                    <el-space :size="20">
+                        <el-avatar src="https://p.qqan.com/up/2020-9/16010876389657332.jpg"/>
+                        <span class="zhanghu">有钱社区</span>
                         <span class="el-dropdown-link">
                                 <el-button round @click="handleToLogin">退出登录</el-button>            
                         </span>
@@ -90,9 +90,6 @@
 </script>
 
 <style lang="scss" scoped>
-    .el-menu{
-        height: 100%;
-    }
     .el-header {
         display: flex;
         justify-content: flex-end;
@@ -107,6 +104,7 @@
 
     .el-menu {
         height: 100%;
+        border: 0;
     }
     .title{
         display: block;
@@ -121,12 +119,21 @@
     .user-info{
         display: flex;
         align-items: center;
+    
     }
     .el-dropdown-link{
         color: #fff;
         font-size: 20px;
+       
     }
     .el-breadcrumb{
         font-size: 30px;
+    }
+    .el-main{
+        height: calc(100vh - 60px);
+    }
+    .zhanghu{
+        font-size: 25px;
+        color: white;
     }
 </style>

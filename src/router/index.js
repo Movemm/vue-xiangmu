@@ -63,7 +63,7 @@ const router = createRouter({
                     name: 'moneycar',
                     component: MoneyCar,
                     meta: {
-                        breadcrumb: ['停车费']
+                        breadcrumb: ['停车费列表']
                     }
                 },
                 {
@@ -71,7 +71,7 @@ const router = createRouter({
                     name: 'moneyproperty',
                     component: MoneyProperty,
                     meta: {
-                        breadcrumb: ['物业费']
+                        breadcrumb: ['物业费列表']
                     }
                 },
                 {
@@ -79,7 +79,7 @@ const router = createRouter({
                     name: 'qrcode',
                     component: Qrcode,
                     meta: {
-                        breadcrumb: ['二维码']
+                        breadcrumb: ['停车缴费二维码']
                     }
                 }
             ]
