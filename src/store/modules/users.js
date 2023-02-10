@@ -17,7 +17,12 @@ const actions={
     },
     family(context,data){
         return http.get('user/family',data)
-
+    },
+    onAddItem(context,data){
+        return http.post('/user/money',data)
+    },
+    AddDate(context,data){
+        return http.post('/user/moneyCar',data)
     }
 }
 const getters={}

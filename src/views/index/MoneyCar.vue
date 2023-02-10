@@ -58,11 +58,18 @@ export default{
     },
     AddDate(){
       this.num ++
-      this.tableData.push({
-        date:`
-            2023-05-0${this.num}
-        `
-      })
+      this.$store.dispatch('users/AddDate',{
+          date:`2023-5-${this.num}`
+      }),
+      this.$store.dispatch('users/moneyCar').then((res)=>{
+      // console.log(res.data[0].family[0]);
+      this.tableData = res.data
+    })
+      // this.tableData.push({
+      //   date:`
+      //       2023-5-${this.num}
+      //   `
+      // })
     }
   },
   created(){

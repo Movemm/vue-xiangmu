@@ -53,7 +53,6 @@
   <script  >
 
 
-import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
 
@@ -63,12 +62,13 @@ import { ElMessage } from 'element-plus'
         tableData :[],
         input:0,
         num:2,
-        date:13,
+        date:11,
         mon:1,
         name:'',
         louhao:'',
         search:'',
-        a:[]
+        a:[],
+        all:345
       }
     },
     created(){
@@ -95,23 +95,28 @@ import { ElMessage } from 'element-plus'
         
       },
       onAddItem(){
+        this.date++
         if(this.name === ''){
           ElMessage('请输入要添加的户主姓名')
         }
         else if(this.date != 31){
-          this.date ++
-          this.tableData.unshift({
-          date:`2023-0${this.mon}-${this.date}`,
-                name:`${this.name}`,
+        this.$store.dispatch('users/onAddItem',{
+                date:`2023-0${this.mon}-${this.date}`,
+                name:this.name,
                 number:`${this.num ++}栋102室`,
-                all:"0",
-                tag:"未缴费"  
+                all:this.all++,
+                tag:"未缴费" 
         })
-        }else{
-          this.mon ++
-          this.date = 0
+         ,
+        this.$store.dispatch('users/money').then((res)=>{
+        // console.log(res);
+        this.tableData  = res.data
+        this.a = res.data
+      })
         }
         this.name = ''
+       
+        
        
       },
       getUserList(){
